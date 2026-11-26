@@ -1,0 +1,46 @@
+name: Build APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build APK
+        shell: bash
+        run: |
+          set -e
+          if [ -d "App-main" ]; then
+            PROJECT_DIR="$GITHUB_WORKSPACE/App-main"
+          else
+            PROJECT_DIR="$GITHUB_WORKSPACE"
+          fi
+          cd "$PROJECT_DIR"
+          echo "Build directory: $(pwd)"
+          test -f settings.gradle || test -f settings.gradle.kts
+          test -d app
+          gradle assembleDebug
+          test -f "$PROJECT_DIR/app/build/outputs/apk/debug/app-debug.apk"
+          cp "$PROJECT_DIR/app/build/outputs/apk/debug/app-debug.apk" "$GITHUB_WORKSPACE/Financial.apk"
+          test -f "$GITHUB_WORKSPACE/Financial.apk"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: FinancialAPK
+          path: Financial.apk
+          if-no-files-found: error
