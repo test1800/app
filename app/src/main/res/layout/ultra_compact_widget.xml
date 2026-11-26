@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="7dp"
+    android:background="@drawable/widget_bg"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/widgetUsd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="9sp"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeStepGranularity="1sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/widgetYekUsd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="#E5E7EB"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="9sp"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeStepGranularity="1sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/widgetCrypto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="#E0F2FE"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="9sp"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeStepGranularity="1sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widgetSignal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.45"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="BTC  - ↑↑↑"
+            android:textColor="#F1F5FF"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="9sp"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeStepGranularity="1sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/widgetNobitex"
+                android:includeFontPadding="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:maxLines="1"
+                android:ellipsize="none"
+                android:text="-"
+                android:textColor="#F8FAFC"
+                android:textSize="24sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeStepGranularity="1sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widgetNobitexArrow"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="→"
+                android:textColor="#94A3B8"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/widgetExir"
+                android:translationY="1dp"
+                android:includeFontPadding="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:maxLines="1"
+                android:ellipsize="none"
+                android:text="-"
+                android:textColor="#F8FAFC"
+                android:textSize="24sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeStepGranularity="1sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widgetExirArrow"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="→"
+                android:textColor="#94A3B8"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/widgetBitpin"
+                android:includeFontPadding="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:maxLines="1"
+                android:ellipsize="none"
+                android:text="-"
+                android:textColor="#F8FAFC"
+                android:textSize="24sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeStepGranularity="1sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widgetBitpinArrow"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="→"
+                android:textColor="#94A3B8"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/widgetGlobalAssetPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="#F8FAFC"
+            android:textSize="19sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="8sp"
+            android:autoSizeMaxTextSize="19sp"
+            android:autoSizeStepGranularity="1sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/widgetGlobalGoldButton"
+                android:layout_width="28dp"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:text="Au"
+                android:textColor="#64748B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widgetGlobalOilButton"
+                android:layout_width="28dp"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:text="Oil"
+                android:textColor="#64748B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widgetGlobalTseButton"
+                android:layout_width="30dp"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:text="TSE"
+                android:textColor="#64748B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/widgetCrossoverPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#34D399"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/widgetUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_gravity="start|center_vertical"
+            android:gravity="start|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="Updating…"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+</LinearLayout>
